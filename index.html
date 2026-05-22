@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#a7f3d0',
+                        secondary: '#a5f3fc',
+                        darkText: '#1f2937',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        .bg-moving {
+            background: linear-gradient(-45deg, #e0f2fe, #a7f3d0, #ecfeff, #a5f3fc);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+.glass {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-moving text-darkText font-sans min-h-screen relative overflow-x-hidden">
+    <nav class="fixed w-full z-50 glass transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#"
+                        class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-600 to-cyan-600">Portfolio.</a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home"
+                        class="text-gray-700 hover:text-teal-600 transition duration-300 font-medium">Home</a>
+                    <a href="#about"
+                        class="text-gray-700 hover:text-teal-600 transition duration-300 font-medium">About</a>
+                    <a href="#skills"
+                        class="text-gray-700 hover:text-teal-600 transition duration-300 font-medium">Skills</a>
+                    <a href="#projects"
+                        class="text-gray-700 hover:text-teal-600 transition duration-300 font-medium">Projects</a>
+                    <a href="#contact"
+                        class="text-gray-700 hover:text-teal-600 transition duration-300 font-medium">Contact</a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-teal-600 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden glass border-t border-white border-opacity-50 absolute w-full">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
+                <a href="#home" class="block px-3 py-2 text-gray-700 hover:text-teal-600 font-medium">Home</a>
+                <a href="#about" class="block px-3 py-2 text-gray-700 hover:text-teal-600 font-medium">About</a>
+                <a href="#skills" class="block px-3 py-2 text-gray-700 hover:text-teal-600 font-medium">Skills</a>
+                <a href="#projects" class="block px-3 py-2 text-gray-700 hover:text-teal-600 font-medium">Projects</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-700 hover:text-teal-600 font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <section id="home" class="min-h-screen flex items-center justify-center pt-16 px-4">
+        <div class="text-center">
+            <h1 class="text-5xl md:text-7xl font-bold mb-4 text-gray-800 tracking-tight drop-shadow-sm">
+                Hello, I'm <br />
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-cyan-500">Eng Abdalla
+                    Dahir</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                I build beautiful, responsive, and dynamic web experiences using modern frontend technologies.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#projects"
+                    class="px-8 py-3 rounded-full bg-gradient-to-r from-teal-400 to-cyan-400 text-white font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition transform duration-300">View
+                    My Work</a>
+                <a href="#contact"
+                    class="px-8 py-3 rounded-full glass border border-teal-300 text-teal-800 font-semibold shadow hover:shadow-md hover:bg-white/40 transition duration-300">Contact
+                    Me</a>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="about" class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="glass-card rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Workspace" class="rounded-2xl shadow-lg w-full h-auto object-cover border border-white/50">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-800">About Me</h2>
+                    <p class="text-lg text-gray-600 mb-4 leading-relaxed">
+                        I am a passionate web developer focused on creating intuitive and visually stunning user
+                        interfaces. I love mixing creativity with technical logic to solve problems.
+                    </p>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                        My goal is to craft digital experiences that are not only functional but also delightful to use.
+                        I enjoy exploring new design trends and bringing them to life with clean code.
+                    </p>
+                    <a href="#contact"
+                        class="inline-block border-b-2 border-teal-500 text-teal-600 hover:text-teal-800 hover:border-teal-800 transition duration-300 font-medium">Let's
+                        work together &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="skills" class="py-20 px-4 relative">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-gray-800">My Skills</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+
+                <div
+                    class="glass-card rounded-2xl p-6 text-center hover:-translate-y-2 transition transform duration-300">
+                    <i class="fab fa-html5 text-5xl text-orange-500 mb-4 drop-shadow-sm"></i>
+                    <h3 class="text-xl font-semibold text-gray-700">HTML5</h3>
+                </div>
+
+                <div
+                    class="glass-card rounded-2xl p-6 text-center hover:-translate-y-2 transition transform duration-300">
+                    <i class="fab fa-css3-alt text-5xl text-blue-500 mb-4 drop-shadow-sm"></i>
+                    <h3 class="text-xl font-semibold text-gray-700">CSS3</h3>
+                </div>
+
+                <div
+                    class="glass-card rounded-2xl p-6 text-center hover:-translate-y-2 transition transform duration-300">
+                    <i class="fab fa-js text-5xl text-yellow-400 mb-4 drop-shadow-sm"></i>
+                    <h3 class="text-xl font-semibold text-gray-700">JavaScript</h3>
+                </div>
+
+                <div
+                    class="glass-card rounded-2xl p-6 text-center hover:-translate-y-2 transition transform duration-300">
+                    <svg class="w-12 h-12 mx-auto mb-4 text-cyan-400 drop-shadow-sm" fill="currentColor"
+                        viewBox="0 0 24 24">
+                        <path
+                            d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z" />
+                    </svg>
+                    <h3 class="text-xl font-semibold text-gray-700">Tailwind CSS</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="projects" class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-gray-800">Featured Projects</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div class="glass-card rounded-2xl overflow-hidden group">
+                    <div class="h-48 bg-gray-200 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Project 1"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">E-Commerce UI</h3>
+                        <p class="text-gray-600 mb-4">A modern online store frontend with glassmorphism touches and
+                            smooth interactions.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-3 py-1 bg-white/50 rounded-full text-sm font-medium text-teal-700">HTML</span>
+                            <span
+                                class="px-3 py-1 bg-white/50 rounded-full text-sm font-medium text-teal-700">Tailwind</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="glass-card rounded-2xl overflow-hidden group">
+                    <div class="h-48 bg-gray-200 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Project 2"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Dashboard Design</h3>
+                        <p class="text-gray-600 mb-4">A clean, light-themed admin dashboard with responsive layouts and
+                            interactive charts layout.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-white/50 rounded-full text-sm font-medium text-teal-700">JS</span>
+                            <span
+                                class="px-3 py-1 bg-white/50 rounded-full text-sm font-medium text-teal-700">CSS3</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="glass-card rounded-2xl overflow-hidden group">
+                    <div class="h-48 bg-gray-200 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Project 3"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Portfolio Template</h3>
+                        <p class="text-gray-600 mb-4">A fully responsive, high-performance portfolio template for
+                            creative professionals.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-3 py-1 bg-white/50 rounded-full text-sm font-medium text-teal-700">HTML</span>
+                            <span
+                                class="px-3 py-1 bg-white/50 rounded-full text-sm font-medium text-teal-700">Tailwind</span>
+                            <span class="px-3 py-1 bg-white/50 rounded-full text-sm font-medium text-teal-700">JS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="py-20 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="glass-card rounded-3xl p-8 md:p-12 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-800">Get In Touch</h2>
+                <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+                    I'm currently available for freelance work and open to new opportunities. Whether you have a
+                    question or just want to say hi, I'll try my best to get back to you!<br>
+                    <span class="font-bold text-teal-600 text-xl mt-4 inline-block"><i
+                            class="fas fa-phone-alt mr-2"></i> 0614794089</span>
+                </p>
+                <form class="max-w-xl mx-auto space-y-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <input type="text" placeholder="Name"
+                            class="w-full px-4 py-3 rounded-xl bg-white/50 border border-white focus:outline-none focus:ring-2 focus:ring-teal-400 placeholder-gray-500 text-gray-800 transition">
+                        <input type="email" placeholder="Email"
+                            class="w-full px-4 py-3 rounded-xl bg-white/50 border border-white focus:outline-none focus:ring-2 focus:ring-teal-400 placeholder-gray-500 text-gray-800 transition">
+                    </div>
+                    <textarea placeholder="Your Message" rows="4"
+                        class="w-full px-4 py-3 rounded-xl bg-white/50 border border-white focus:outline-none focus:ring-2 focus:ring-teal-400 placeholder-gray-500 text-gray-800 transition"></textarea>
+                    <button type="submit"
+                        class="w-full py-3 rounded-xl bg-gradient-to-r from-teal-500 to-cyan-500 text-white font-bold text-lg hover:shadow-lg hover:opacity-90 transition duration-300">
+                        Send Message <i class="fas fa-paper-plane ml-2"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer class="py-8 text-center text-gray-600 glass mt-12 border-t border-white/50">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p>&copy; <span id="current-year"></span> Eng Abdalla Dahir. All rights reserved.</p>
+            <div class="flex space-x-4">
+                <a href="#" class="text-gray-500 hover:text-teal-600 transition"><i
+                        class="fab fa-github text-xl"></i></a>
+                <a href="#" class="text-gray-500 hover:text-teal-600 transition"><i
+                        class="fab fa-linkedin text-xl"></i></a>
+                <a href="#" class="text-gray-500 hover:text-teal-600 transition"><i
+                        class="fab fa-twitter text-xl"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
